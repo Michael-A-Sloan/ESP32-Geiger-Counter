@@ -1,5 +1,5 @@
 # ESP32-Geiger-Counter
-ESP32 Geiger Counter "Fundamentals of Nuclear Energy" "Project"
+ESP32 Geiger Counter "Fundamentals of Nuclear Engineering" "Project"
 
 
 The IDE used was the Arduino IDE
