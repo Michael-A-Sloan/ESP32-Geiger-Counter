@@ -12,7 +12,7 @@ If you switch IDE please update the main file to main.cpp
 
 # IoT Geiger Counter with ESP32, OLED Display, Thingspeak Channel and MQTT
 
-- Measures radioactive gamma and beta radiation with quite good resolution at the typical low levels of the natural radiation (due to the big STS-6 tube)
+- Measures radioactive gamma and beta radiation with quite good resolution at the typical low levels of the natural radiation (due to the big SBM-20 tube)
 - Displays the current counts per minute (CPM), estimated dose equivalent rate in micro-Sievert per hour (µS/h) and 10 minutes history with 5 second resolution as bargraph
 ![Circuit Board](media/geiger-counter-pcb.jpg)
 - Low-power mode for use with batteries, OLED display and click sounds on, WiFi off
@@ -25,7 +25,7 @@ Feel free to use this project as a base for your own projects AT YOUR OWN RISK!
 
 # Hardware
 
-- Russian Geiger counter tube STS-6 (CTC-6) at 400 V with ~5 M&#937; series resistor
+- Russian Geiger counter tube SBM-20 at 400 V with ~5 M&#937; series resistor
 - High voltage circuit from ArnoR at mikrocontroller.net https://www.mikrocontroller.net/topic/380666, schematic https://www.mikrocontroller.net/attachment/273334/HystereseStepUpTLC555-2.png. *Keep the high-voltage capacitor small to avoid dangerous charges! For safety avoid any contact with the high voltage parts!*
 - ~400 µs pulse generation using Geiger tube series resistors as voltage divider, high impedance input to darlington transistor and TLC 555 timer for rectangle pulse generation (schematic and pulses see below)
 - ESP32 board EzSBC ESP32-01
