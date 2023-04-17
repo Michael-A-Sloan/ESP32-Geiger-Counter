@@ -17,8 +17,8 @@ If you switch IDE please update the main file to main.cpp
 ![Circuit Board](media/geiger-counter-pcb.jpg)
 - Low-power mode for use with batteries, OLED display and click sounds on, WiFi off
 - WiFi mode for
-  - optional thingspeak data upload every minute, see https://thingspeak.com/channels/758223
-[![https://thingspeak.com/channels/758223](media/thingspeak.png)](https://thingspeak.com/channels/758223)
+  - optional thingspeak data upload every minute, see https://thingspeak.com/channels/......
+[![https://thingspeak.com/channels/......](media/thingspeak.png)
   - MQTT publishing to a broker every minute with optional SSL/TLS support
 
 Feel free to use this project as a base for your own projects AT YOUR OWN RISK!
@@ -38,7 +38,7 @@ Feel free to use this project as a base for your own projects AT YOUR OWN RISK!
 
 # Software
 
-- [PlatformIO VSCode project](https://github.com/platformio/platformio-vscode-ide) using [Arduino](https://github.com/arduino/Arduino) library, [Espressif ESP-IDF](https://github.com/espressif/esp-idf) for sleep functions, [U8g2](https://github.com/olikraus/u8g2) for display output and [Arduino-MQTT](https://github.com/256dpi/arduino-mqtt).
+- [Arduino IDE](https://www.arduino.cc/en/software), [Espressif ESP-IDF](https://github.com/espressif/esp-idf) for sleep functions, [U8g2](https://github.com/olikraus/u8g2) for display output and [Arduino-MQTT](https://github.com/256dpi/arduino-mqtt).
 - Low-power mode uses light sleep, a wake-up for each signal pulse change and a wake-up every 1000 ms to update pulse statistics and OLED. This results in about 90% sleep. Could be improved using deep sleep and ULP. However, light sleep is already quite good and much easier.
 - WiFi mode uses no sleep and simple interrupts for pulse counting. Pulse statistics and OLED are updated every 1000 ms, data is sent to thingspeak every 60 s.
 - Credentials, addresses and user for WiFi, thingspeak channel and mqtt broker are declared in `credentials.h` and replaced by dummy values in `credentials.cpp` by default. Define your real secrets in a sibling file named `secret_credentials.h` (do never commit!). It will be automatically included by `credentials.cpp` if it exists. You may copy `TEMPLATE_secret_credentials.h` as a starting point.
@@ -73,6 +73,6 @@ It is then fed into a 555 timer to further extend its duration for the ESP32 wak
 
 # Schematic
 
-KiCad files are located in folder `hardware`. Currently only schematic, no PCB.
+Hardware / KiCad files are located in folder `hardware`. Currently only schematic, no PCB.
 
 ![Schematics](media/kicad-circuit-sketch.png)
